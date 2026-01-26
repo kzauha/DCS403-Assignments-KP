@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int globalCount = 0;
+
+void showCounter() {
+
+    int localCount = 0;
+    static int count = 0;
+
+    count++;
+    localCount++;
+    globalCount++;
+
+    cout << "Local count: " << localCount << ", Static Count: " << count << ", Global Count: " << globalCount << endl;
+}
+
+int main() {
+
+    showCounter();
+    showCounter();
+    
+}
